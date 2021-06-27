@@ -10,7 +10,7 @@ module "jb-rg" {
   rg-name = azurerm_resource_group.jb-rg.name
   rg-location = azurerm_resource_group.jb-rg.location
   vm-name ="${var.env}-jb"
-  admin-password = "${var.admin_password}"
+  admin-password = data.azurerm_key_vault_secret.kv.value
   subnet-id = module.fe-vnet.vnet_subnets[1]
 }
 

@@ -39,7 +39,7 @@ module "be-rg" {
   rg-name = azurerm_resource_group.be-rg.name
   rg-location = azurerm_resource_group.be-rg.location
   vm-name ="${var.env}-be"
-  admin-password = "${var.admin_password}"
+  admin-password = data.azurerm_key_vault_secret.kv.value
   subnet-id = module.be-vnet.vnet_subnets[0]
 }
 
