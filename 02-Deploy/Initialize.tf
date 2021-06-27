@@ -8,13 +8,13 @@ terraform {
   }
 
   #Defining the backed (remote state)
-  #  backend "azurerm" {
-  #       resource_group_name = "mng-rg"
-  #       storage_account_name = "tazarstorage03"
-  #       container_name = "tfstate"
-  #       key = "lab-9.4.tfstate"
+   backend "azurerm" {
+        resource_group_name = "mng-rg"
+        storage_account_name = "tazarstorage03"
+        container_name = "tfstate"
+        key = "ws-${var.env}.tfstate"
 
-  #   }
+    }
 
 }
 
