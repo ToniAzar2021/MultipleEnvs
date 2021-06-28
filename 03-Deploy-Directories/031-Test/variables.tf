@@ -14,6 +14,6 @@ variable "key" {
 variable "env"{
     
 }
-varibale "admin_password"{
+variable "admin_password"{
 
 }
